@@ -172,6 +172,18 @@ All colors MUST be HSL.
   .animate-bounce-gentle {
     animation: bounce-gentle 3s ease-in-out infinite;
   }
+  
+  .animate-drift-right {
+    animation: drift-right 15s linear infinite;
+  }
+  
+  .animate-drift-left {
+    animation: drift-left 18s linear infinite;
+  }
+  
+  .animate-spiral {
+    animation: spiral 12s ease-in-out infinite;
+  }
 
   /* Interactive Effects */
   .hover-lift {
@@ -230,4 +242,24 @@ All colors MUST be HSL.
 @keyframes bounce-gentle {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
   50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+@keyframes drift-right {
+  0% { transform: translateX(-100px) translateY(0px) rotate(0deg); }
+  50% { transform: translateX(50vw) translateY(-30px) rotate(180deg); }
+  100% { transform: translateX(100vw) translateY(0px) rotate(360deg); }
+}
+
+@keyframes drift-left {
+  0% { transform: translateX(100vw) translateY(0px) rotate(0deg); }
+  50% { transform: translateX(50vw) translateY(-40px) rotate(-180deg); }
+  100% { transform: translateX(-100px) translateY(0px) rotate(-360deg); }
+}
+
+@keyframes spiral {
+  0% { transform: translateX(0px) translateY(0px) rotate(0deg) scale(0.5); }
+  25% { transform: translateX(100px) translateY(-50px) rotate(90deg) scale(1); }
+  50% { transform: translateX(0px) translateY(-100px) rotate(180deg) scale(0.8); }
+  75% { transform: translateX(-100px) translateY(-50px) rotate(270deg) scale(1); }
+  100% { transform: translateX(0px) translateY(0px) rotate(360deg) scale(0.5); }
 }
