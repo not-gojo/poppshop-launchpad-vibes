@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Mail, Instagram, Twitter, Facebook, Sparkles, Shirt } from "lucide-react";
+import { Mail, Instagram, Twitter, Facebook, Sparkles, Shirt, Zap, Target } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import poppshopLogo from "@/assets/poppshop-logo.png";
 
@@ -36,18 +36,40 @@ const ComingSoonHero = () => {
         <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-primary rounded-full opacity-20 animate-float" />
         <div className="absolute top-40 right-20 w-24 h-24 bg-gradient-secondary rounded-full opacity-20 animate-bounce-gentle" />
         <div className="absolute bottom-32 left-1/4 w-20 h-20 bg-gradient-accent rounded-full opacity-20 animate-float" />
-        <div className="absolute bottom-20 right-1/3 w-28 h-28 bg-brand-orange rounded-full opacity-15 animate-bounce-gentle" />
+        <div className="absolute bottom-20 right-1/3 w-28 h-28 bg-brand-gray rounded-full opacity-15 animate-bounce-gentle" />
         
         {/* Moving particles */}
         <div className="absolute top-1/4 w-16 h-16 bg-gradient-primary rounded-full opacity-15 animate-drift-right" />
         <div className="absolute top-1/2 w-12 h-12 bg-gradient-secondary rounded-full opacity-10 animate-drift-left" />
         <div className="absolute top-3/4 w-20 h-20 bg-gradient-accent rounded-full opacity-12 animate-drift-right" style={{ animationDelay: '5s' }} />
-        <div className="absolute top-1/3 w-8 h-8 bg-brand-pink rounded-full opacity-20 animate-drift-left" style={{ animationDelay: '8s' }} />
+        <div className="absolute top-1/3 w-8 h-8 bg-brand-cyan rounded-full opacity-20 animate-drift-left" style={{ animationDelay: '8s' }} />
         
         {/* Spiral particles */}
         <div className="absolute top-1/2 left-1/2 w-14 h-14 bg-gradient-warm rounded-full opacity-15 animate-spiral" />
-        <div className="absolute top-1/4 left-3/4 w-10 h-10 bg-brand-blue rounded-full opacity-18 animate-spiral" style={{ animationDelay: '4s' }} />
+        <div className="absolute top-1/4 left-3/4 w-10 h-10 bg-brand-cyan rounded-full opacity-18 animate-spiral" style={{ animationDelay: '4s' }} />
         <div className="absolute bottom-1/3 left-1/3 w-18 h-18 bg-gradient-secondary rounded-full opacity-12 animate-spiral" style={{ animationDelay: '7s' }} />
+        
+        {/* Shuriken particles */}
+        <div className="absolute top-16 right-1/4 opacity-30 animate-rotate" style={{ animationDelay: '2s' }}>
+          <Target className="w-8 h-8 text-cyan-400" />
+        </div>
+        <div className="absolute bottom-1/4 left-16 opacity-25 animate-rotate-slow" style={{ animationDelay: '6s' }}>
+          <Target className="w-12 h-12 text-white" />
+        </div>
+        <div className="absolute top-1/3 right-16 opacity-20 animate-rotate" style={{ animationDelay: '10s' }}>
+          <Target className="w-6 h-6 text-cyan-300" />
+        </div>
+        
+        {/* Sword particles */}
+        <div className="absolute top-1/2 left-20 opacity-25 animate-drift-right" style={{ animationDelay: '3s' }}>
+          <Zap className="w-10 h-10 text-cyan-400 rotate-45" />
+        </div>
+        <div className="absolute bottom-1/2 right-24 opacity-20 animate-drift-left" style={{ animationDelay: '7s' }}>
+          <Zap className="w-8 h-8 text-white rotate-[135deg]" />
+        </div>
+        <div className="absolute top-2/3 left-1/2 opacity-30 animate-drift-right" style={{ animationDelay: '12s' }}>
+          <Zap className="w-6 h-6 text-cyan-300 rotate-[225deg]" />
+        </div>
       </div>
 
       {/* Main Content */}
@@ -58,7 +80,7 @@ const ComingSoonHero = () => {
             <img 
               src={poppshopLogo} 
               alt="POPPSHOP" 
-              className="mx-auto h-20 w-auto hover-lift"
+              className="mx-auto h-20 w-auto hover-lift filter brightness-0 invert"
             />
           </div>
           <div className="flex items-center justify-center gap-2 text-muted-foreground">
@@ -110,9 +132,9 @@ const ComingSoonHero = () => {
           {/* Social Media Icons */}
           <div className="flex justify-center gap-4 mb-16">
             {[
-              { icon: Instagram, color: "hover:text-brand-pink", label: "Instagram" },
-              { icon: Twitter, color: "hover:text-brand-blue", label: "Twitter" },
-              { icon: Facebook, color: "hover:text-brand-purple", label: "Facebook" },
+              { icon: Instagram, color: "hover:text-cyan-400", label: "Instagram" },
+              { icon: Twitter, color: "hover:text-cyan-300", label: "Twitter" },
+              { icon: Facebook, color: "hover:text-white", label: "Facebook" },
             ].map(({ icon: Icon, color, label }) => (
               <Button
                 key={label}

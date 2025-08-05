@@ -8,54 +8,55 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Brand Colors - Vibrant and trendy */
-    --brand-purple: 280 100% 70%;
-    --brand-pink: 320 100% 75%;
-    --brand-orange: 25 100% 65%;
-    --brand-blue: 200 100% 70%;
-    --brand-green: 140 60% 60%;
+    /* Brand Colors - Cyber/Ninja Theme */
+    --brand-cyan: 180 100% 50%;
+    --brand-cyan-light: 180 100% 70%;
+    --brand-cyan-dark: 180 100% 30%;
+    --brand-white: 0 0% 100%;
+    --brand-black: 0 0% 0%;
+    --brand-gray: 0 0% 20%;
     
     /* Background System */
-    --background: 0 0% 100%;
-    --background-secondary: 280 20% 98%;
-    --foreground: 280 15% 15%;
+    --background: 0 0% 8%;
+    --background-secondary: 0 0% 12%;
+    --foreground: 0 0% 95%;
 
     /* Card System */
-    --card: 0 0% 100%;
-    --card-foreground: 280 15% 15%;
-    --card-hover: 280 30% 96%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 95%;
+    --card-hover: 0 0% 15%;
 
     /* Interactive Elements */
-    --primary: 280 100% 70%;
-    --primary-foreground: 0 0% 100%;
-    --primary-glow: 280 100% 85%;
+    --primary: 180 100% 50%;
+    --primary-foreground: 0 0% 0%;
+    --primary-glow: 180 100% 70%;
     
-    --secondary: 320 100% 75%;
-    --secondary-foreground: 0 0% 100%;
-    --secondary-glow: 320 100% 88%;
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 95%;
+    --secondary-glow: 0 0% 40%;
 
-    --accent: 25 100% 65%;
-    --accent-foreground: 0 0% 100%;
-    --accent-glow: 25 100% 80%;
+    --accent: 180 100% 70%;
+    --accent-foreground: 0 0% 0%;
+    --accent-glow: 180 100% 85%;
 
     /* Neutral System */
-    --muted: 280 10% 95%;
-    --muted-foreground: 280 8% 45%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
     
-    --border: 280 15% 88%;
-    --input: 280 10% 96%;
-    --ring: 280 100% 70%;
+    --border: 0 0% 25%;
+    --input: 0 0% 12%;
+    --ring: 180 100% 50%;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--brand-purple)), hsl(var(--brand-pink)));
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--brand-orange)), hsl(var(--brand-pink)));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--brand-blue)), hsl(var(--brand-green)));
-    --gradient-warm: linear-gradient(45deg, hsl(var(--brand-orange)), hsl(var(--brand-pink)), hsl(var(--brand-purple)));
+    --gradient-primary: linear-gradient(135deg, hsl(var(--brand-cyan)), hsl(var(--brand-cyan-light)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--brand-black)), hsl(var(--brand-gray)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--brand-cyan-dark)), hsl(var(--brand-cyan)));
+    --gradient-warm: linear-gradient(45deg, hsl(var(--brand-white)), hsl(var(--brand-cyan)), hsl(var(--brand-black)));
     
     /* Shadows */
-    --shadow-glow: 0 0 40px hsl(var(--brand-purple) / 0.3);
-    --shadow-soft: 0 10px 30px -5px hsl(var(--brand-purple) / 0.2);
-    --shadow-vibrant: 0 20px 40px -10px hsl(var(--brand-pink) / 0.4);
+    --shadow-glow: 0 0 40px hsl(var(--brand-cyan) / 0.4);
+    --shadow-soft: 0 10px 30px -5px hsl(var(--brand-cyan) / 0.2);
+    --shadow-vibrant: 0 20px 40px -10px hsl(var(--brand-cyan) / 0.5);
 
     /* Animation Variables */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -81,33 +82,34 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode uses same cyber theme */
+    --background: 0 0% 5%;
+    --foreground: 0 0% 98%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 180 100% 60%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 180 100% 70%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 0 0% 20%;
+    --input: 0 0% 12%;
+    --ring: 180 100% 60%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -184,6 +186,14 @@ All colors MUST be HSL.
   .animate-spiral {
     animation: spiral 12s ease-in-out infinite;
   }
+  
+  .animate-rotate {
+    animation: rotate 8s linear infinite;
+  }
+  
+  .animate-rotate-slow {
+    animation: rotate 15s linear infinite;
+  }
 
   /* Interactive Effects */
   .hover-lift {
@@ -235,8 +245,13 @@ All colors MUST be HSL.
 }
 
 @keyframes pulse-glow {
-  0% { box-shadow: 0 0 20px hsl(var(--brand-purple) / 0.3); }
-  100% { box-shadow: 0 0 40px hsl(var(--brand-purple) / 0.6); }
+  0% { box-shadow: 0 0 20px hsl(var(--brand-cyan) / 0.3); }
+  100% { box-shadow: 0 0 40px hsl(var(--brand-cyan) / 0.6); }
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 @keyframes bounce-gentle {
